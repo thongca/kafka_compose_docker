@@ -1,0 +1,15 @@
+{
+    "name": "zchat-stg-conversations-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "database.hostname": "pg-zchat-erp-stg-001.postgres.database.azure.com",
+        "database.port": "5432",
+        "database.user": "debezium",
+        "database.password": "JUykZgp4Hp6roW",
+        "database.dbname": "message",
+        "database.sslmode": "prefer",
+        "plugin.name": "pgoutput",
+        "topic.prefix": "zchat-stg-conversations",
+        "table.include.list": "public.conversations"
+    }
+}

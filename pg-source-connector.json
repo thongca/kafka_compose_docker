@@ -1,0 +1,22 @@
+{
+    "name": "zchat-stg-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "database.hostname": "pg-zchat-erp-stg-001.postgres.database.azure.com",
+        "database.port": "5432",
+        "database.user": "debezium",
+        "database.password": "JUykZgp4Hp6roW",
+        "database.dbname": "message",
+        "database.sslmode": "prefer",
+        "plugin.name": "pgoutput",
+        "topic.prefix": "zchat-stg",
+        "table.include.list": "public.conversations",
+        "publication.autocreate.mode": "disabled",
+        "snapshot.mode": "NEVER",
+        "schema.history.internal.kafka.bootstrap.servers": "kafka:9092",
+        "schema.history.internal.kafka.topic": "schema-changes.zchat-stg",
+        "signal.enabled.channels": "source,jmx", 
+        "signal.data.collection": "zchat-stg.debezium_signal", 
+        "notification.enabled.channels": "jmx"
+    }
+}
